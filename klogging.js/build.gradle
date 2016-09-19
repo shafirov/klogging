@@ -1,0 +1,30 @@
+apply plugin: 'kotlin2js'
+
+repositories {
+    maven { url "https://dl.bintray.com/kotlin/kotlin-dev" }
+    mavenCentral()
+    jcenter()
+}
+
+sourceSets {
+    main {
+        kotlin {
+            srcDirs = ['src', '../shared/src']
+        }
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-js-library:$kotlin_version"
+}
+
+def target = "${projectDir}/build/classes/main"
+
+compileKotlin2Js {
+    kotlinOptions.metaInfo = true
+    kotlinOptions.outputFile= "$target/klogging.js"
+    kotlinOptions.sourceMap=true
+    kotlinOptions.moduleKind='commonjs'
+}
+
+jar.dependsOn compileKotlin2Js

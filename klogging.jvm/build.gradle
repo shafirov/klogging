@@ -1,0 +1,20 @@
+apply plugin: 'kotlin'
+
+repositories {
+    maven { url "https://dl.bintray.com/kotlin/kotlin-dev" }
+    mavenCentral()
+    jcenter()
+}
+
+sourceSets {
+    main {
+        kotlin {
+            srcDirs = ['src', '../shared/src']
+        }
+    }
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.slf4j:slf4j-api:$sl4j_version"
+}

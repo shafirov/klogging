@@ -1,0 +1,35 @@
+group 'org.jetbrains.klogging'
+version '1.0.0-SNAPSHOT'
+
+buildscript {
+	apply from: 'versions.gradle'
+
+	repositories {
+        maven { url "https://dl.bintray.com/kotlin/kotlin-dev" }
+        mavenCentral()
+        jcenter()
+	}
+	
+	dependencies {
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+	}
+}
+
+apply plugin: "maven"
+apply plugin: "maven-publish"
+
+publishing {
+    publications {
+        jvm(MavenPublication) {
+            artifactId 'klogging.jvm'
+            from findProject("klogging.jvm").components.java
+        }
+
+        js(MavenPublication) {
+            artifactId 'klogging.js'
+            from findProject("klogging.js").components.java
+        }
+    }
+}
+
+

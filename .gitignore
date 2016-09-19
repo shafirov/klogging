@@ -1,0 +1,25 @@
+*.class
+
+# Package Files #
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# IntelliJ IDEA project
+.idea/modules
+.idea/libraries
+.idea/copyright
+.idea/workspace.xml
+.idea/uiDesigner.xml
+.idea/modules.xml
+.idea/gradle.xml
+.idea/compiler.xml
+.idea/vcs.xml
+.idea/misc.xml
+.idea/typing_corrector_settings.xml
+
+# Gradle
+.gradle
+build
