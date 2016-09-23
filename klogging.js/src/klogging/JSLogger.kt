@@ -9,28 +9,28 @@ internal class JSLogger(val name: String, val level: KLoggingLevels): BaseLogger
 
     override fun trace(message: Any?) {
         if (isTraceEnabled) {
-            console.info("[$name]: ", message)
+            console.log("[$name]: ", message)
         }
     }
-    
+
     override fun debug(message: Any?) {
         if (isDebugEnabled) {
-            console.info("[$name]: ", message)
+            console.log("[$name]: ", message)
         }
     }
-    
+
     override fun info(message: Any?) {
         if (isInfoEnabled) {
             console.info("[$name]: ", message)
         }
     }
-    
+
     override fun warn(message: Any?) {
         if (isWarnEnabled) {
             console.warn("[$name]: ", message)
         }
     }
-    
+
     override fun error(message: Any?) {
         if (isErrorEnabled) {
             console.error("[$name]: ", message)
@@ -39,28 +39,28 @@ internal class JSLogger(val name: String, val level: KLoggingLevels): BaseLogger
 
     override fun trace(t: Throwable, message: Any?) {
         if (isTraceEnabled) {
-            console.info("[$name]: ", message, t)
+            console.log("[$name]: ", message, t)
         }
     }
-    
+
     override fun debug(t: Throwable, message: Any?) {
         if (isDebugEnabled) {
-            console.info("[$name]: ", message, t)
+            console.log("[$name]: ", message, t)
         }
     }
-    
+
     override fun info(t: Throwable, message: Any?) {
         if (isInfoEnabled) {
             console.info("[$name]: ", message, t)
         }
     }
-    
+
     override fun warn(t: Throwable, message: Any?) {
         if (isWarnEnabled) {
             console.warn("[$name]: ", message, t)
         }
     }
-    
+
     override fun error(t: Throwable, message: Any?) {
         if (isErrorEnabled) {
             console.error("[$name]: ", message, t)
