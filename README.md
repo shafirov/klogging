@@ -39,3 +39,13 @@ class Baz {
 } 
 
 ```
+
+For file-level loggers I recommend following IntelliJ IDEA live template:
+```xml
+<template name="log" value="private val log = klogging.KLoggers.logger(&quot;$LOGGER_NAME$&quot;)" description="Logger" toReformat="false" toShortenFQNames="true">
+  <variable name="LOGGER_NAME" expression="groovyScript(&quot;com.intellij.openapi.module.ModuleUtil.findModuleForFile(_editor.virtualFile, _editor.project).name + \&quot;/\&quot; + _editor.virtualFile.name&quot;) " defaultValue="" alwaysStopAt="false" />
+  <context>
+    <option name="KOTLIN_TOPLEVEL" value="true" />
+  </context>
+</template>
+```
