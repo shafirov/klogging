@@ -1,5 +1,7 @@
 # KLogging
 
+[![](https://jitpack.io/v/shafirov/klogging.svg)](https://jitpack.io/#shafirov/klogging)
+
 KLogging provides unified logging API, which you can use from Kotlin code targeted for both JVM and Javascript.
 The library is inspired by 
 - code at [https://github.com/MicroUtils/kotlin-logging] 
