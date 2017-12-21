@@ -1,7 +1,6 @@
-apply plugin: 'kotlin2js'
+apply plugin: 'kotlin-platform-js'
 
 repositories {
-    maven { url "https://dl.bintray.com/kotlin/kotlin-dev" }
     mavenCentral()
     jcenter()
 }
@@ -9,22 +8,21 @@ repositories {
 sourceSets {
     main {
         kotlin {
-            srcDirs = ['src', '../shared/src']
+            srcDirs = ['src', '../klogging.common/src']
         }
     }
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-js-library:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
+    expectedBy project(':klogging.common')
 }
 
 def target = "${projectDir}/build/classes/main"
 
 compileKotlin2Js {
     kotlinOptions.metaInfo = true
-    kotlinOptions.outputFile= "$target/klogging.js"
-    kotlinOptions.sourceMap=true
-    kotlinOptions.moduleKind='commonjs'
+    kotlinOptions.outputFile = "$target/klogging.js"
+    kotlinOptions.sourceMap = true
+    kotlinOptions.moduleKind = 'umd'
 }
-
-jar.dependsOn compileKotlin2Js

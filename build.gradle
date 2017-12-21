@@ -9,7 +9,7 @@ buildscript {
         mavenCentral()
         jcenter()
 	}
-	
+
 	dependencies {
 		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 	}
@@ -28,6 +28,11 @@ publishing {
         js(MavenPublication) {
             artifactId 'klogging.js'
             from findProject("klogging.js").components.java
+        }
+
+        common(MavenPublication) {
+            artifactId 'klogging.common'
+            from findProject("klogging.common").components.java
         }
     }
 }

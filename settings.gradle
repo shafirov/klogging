@@ -1,2 +1,3 @@
 include ':klogging.jvm'
 include ':klogging.js'
+include ':klogging.common'
