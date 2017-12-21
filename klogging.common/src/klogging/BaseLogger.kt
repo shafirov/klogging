@@ -7,6 +7,8 @@ interface BaseLogger {
     val isWarnEnabled: Boolean
     val isErrorEnabled: Boolean
 
+    operator fun invoke(message: Any?) = info(message)
+
     fun trace(message: Any?)
     fun debug(message: Any?)
     fun info(message: Any?)
@@ -18,4 +20,5 @@ interface BaseLogger {
     fun info(t: Throwable, message: Any? = "")
     fun warn(t: Throwable, message: Any? = "")
     fun error(t: Throwable, message: Any? = "")
+
 }
