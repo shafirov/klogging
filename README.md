@@ -20,9 +20,9 @@ How to add to project:
 ```
 Use these dependencies per kotlin module respectively:
 ```
-compile 'com.github.lewik.klogging:klogging.common:1.2.0'
-compile 'com.github.lewik.klogging:klogging.js:1.2.0'
-compile 'com.github.lewik.klogging:klogging.jvm:1.2.0'
+compile 'com.github.lewik.klogging:klogging.common:1.2.10'
+compile 'com.github.lewik.klogging:klogging.js:1.2.10'
+compile 'com.github.lewik.klogging:klogging.jvm:1.2.10'
 ```                                   
                                               
 KLogger class features 5 levels of logging (to mirror that of SLF4J): trace, debug, info, warn, error with 2 flavors each:
