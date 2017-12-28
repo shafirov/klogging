@@ -24,6 +24,7 @@ compile 'com.github.lewik.klogging:klogging.common:1.2.10'
 compile 'com.github.lewik.klogging:klogging.js:1.2.10'
 compile 'com.github.lewik.klogging:klogging.jvm:1.2.10'
 ```                                   
+Versions will be updated with same kotlin version 
                                               
 KLogger class features 5 levels of logging (to mirror that of SLF4J): trace, debug, info, warn, error with 2 flavors each:
                                               
