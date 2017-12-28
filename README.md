@@ -1,6 +1,6 @@
 # KLogging
 
-[![](https://jitpack.io/v/lewik/klogging.svg)](https://jitpack.io/#lewik/klogging)
+[![](https://jitpack.io/v/shafirov/klogging.svg)](https://jitpack.io/#shafirov/klogging)
 
 KLogging provides unified logging API, which you can use from Kotlin code targeted for JVM, Javascript and common kotlin.
 The library is inspired by
@@ -9,7 +9,7 @@ The library is inspired by
 - and discussion at [http://stackoverflow.com/questions/34416869/idiomatic-way-of-logging-in-kotlin]
                                       
                                       
-How to add to project:
+## Download
 ```
 	allprojects {
 		repositories {
@@ -20,12 +20,13 @@ How to add to project:
 ```
 Use these dependencies per kotlin module respectively:
 ```
-compile 'com.github.lewik.klogging:klogging.common:1.2.10'
-compile 'com.github.lewik.klogging:klogging.js:1.2.10'
-compile 'com.github.lewik.klogging:klogging.jvm:1.2.10'
+compile 'com.github.shafirov.klogging:klogging.common:1.2.10'
+compile 'com.github.shafirov.klogging:klogging.js:1.2.10'
+compile 'com.github.shafirov.klogging:klogging.jvm:1.2.10'
 ```                                   
 Versions will be updated with same kotlin version 
-                                              
+
+## Usage                                              
 KLogger class features 5 levels of logging (to mirror that of SLF4J): trace, debug, info, warn, error with 2 flavors each:
                                               
 ```kotlin
