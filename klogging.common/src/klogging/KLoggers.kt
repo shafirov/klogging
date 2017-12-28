@@ -9,3 +9,7 @@ class KLoggerHolder : WithLogging {
         KLoggers.logger(this)
     }
 }
+
+expect object KLoggers{
+    fun logger(owner: Any): KLogger
+}

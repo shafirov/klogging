@@ -1,21 +1,26 @@
 package klogging
 
-object KLoggers {
+actual object KLoggers {
     private val loggers = js("({})")
     private val levels = mutableListOf<Pair<Regex, KLoggingLevels>>()
 
     var defaultLoggingLevel: KLoggingLevels = KLoggingLevels.INFO
 
-    fun logger(owner: Any): KLogger {
-        val d  = owner.asDynamic()
+    actual fun logger(owner: Any) = when (owner) {
+        is String -> internalLogger(owner)
+        else -> internalLogger(owner)
+    }
+
+    private fun internalLogger(owner: Any): KLogger {
+        val d = owner.asDynamic()
         return d.__logger ?: run {
-            val l = logger(owner.jsClass.name)
+            val l = logger(owner::class.js.name)
             d.__logger = l
             l
         }
     }
 
-    fun logger(name: String): KLogger {
+    private fun internalLogger(name: String): KLogger {
         return loggers[name] ?: run {
             val l = KLogger(JSLogger(name, calcLevel(name)))
             loggers[name] = l
