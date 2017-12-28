@@ -7,6 +7,23 @@ The library is inspired by
 - fork from [https://github.com/shafirov/klogging]  
 - code at [https://github.com/MicroUtils/kotlin-logging] 
 - and discussion at [http://stackoverflow.com/questions/34416869/idiomatic-way-of-logging-in-kotlin]
+                                      
+                                      
+How to add to project:
+```
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Use these dependencies per kotlin module respectively:
+```
+compile 'com.github.lewik.klogging:klogging.common:1.2.0'
+compile 'com.github.lewik.klogging:klogging.js:1.2.0'
+compile 'com.github.lewik.klogging:klogging.jvm:1.2.0'
+```                                   
                                               
 KLogger class features 5 levels of logging (to mirror that of SLF4J): trace, debug, info, warn, error with 2 flavors each:
                                               
