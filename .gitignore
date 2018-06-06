@@ -8,18 +8,10 @@
 hs_err_pid*
 
 # IntelliJ IDEA project
-.idea/modules
-.idea/libraries
-.idea/copyright
-.idea/workspace.xml
-.idea/uiDesigner.xml
-.idea/modules.xml
-.idea/gradle.xml
-.idea/compiler.xml
-.idea/vcs.xml
-.idea/misc.xml
-.idea/typing_corrector_settings.xml
+.idea/*
+!.idea/encodings.xml
+!.idea/dictionaries/
 
 # Gradle
 .gradle
-build
+build/
